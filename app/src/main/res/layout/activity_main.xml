@@ -8,77 +8,118 @@
     android:background="#D8CB4E"
     android:gravity="center"
     tools:context=".MainActivity"
-
+    android:paddingTop="30dp"
+    android:paddingLeft="40dp"
+    android:paddingRight="40dp"
     >
-
-    <ImageView
-        android:id="@+id/registerImage"
-        android:layout_width="280dp"
-        android:layout_height="250dp"
-        android:layout_marginTop="100dp"
-        android:src="@drawable/ic_register"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/registerText1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:gravity="center_horizontal"
-        android:text="Sell and Buy"
+        android:text="Register"
         android:textColor="@color/blue"
-        android:textSize="35dp"
         android:textFontWeight="700"
+        android:textSize="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.1"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        tools:ignore="MissingConstraints"
+
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/registerText1"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxStrokeColor="@color/blue"
+            android:textColor="@color/blue"
+            android:inputType="text"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/mobileNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Mobile Number"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        tools:ignore="MissingConstraints"
+
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxStrokeColor="@color/blue"
+            android:textColor="@color/blue"
+            android:inputType="phone"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        tools:ignore="MissingConstraints"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/mobileNumber"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxStrokeColor="@color/blue"
+            android:textColor="@color/blue"
+            android:inputType="textPassword"
+
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/registerBtn"
+        android:layout_marginTop="30dp"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:textSize="18dp"
+        android:text="Register"
+        app:layout_constraintTop_toBottomOf="@id/password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registerImage"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        />
 
     <TextView
         android:id="@+id/registerText2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:text="Old Stuff"
+        android:layout_marginTop="5dp"
+        android:text="Already have an account? Login"
         android:textColor="@color/blue"
-        android:textSize="35dp"
+        android:textFontWeight="700"
+        android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/registerText1"
+        app:layout_constraintTop_toBottomOf="@+id/registerBtn"
         tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/registerText3"
-        android:layout_marginTop="5dp"
-        android:paddingLeft="30dp"
-        android:textColor="@color/blue"
-        android:paddingRight="30dp"
-        android:gravity="center"
-        android:text="Buy new stuff by getting rid of the older ones"
-        android:textSize="23dp"
-        app:layout_constraintEnd_toEndOf="@id/registerImage"
-        app:layout_constraintStart_toStartOf="@id/registerImage"
-        app:layout_constraintTop_toBottomOf="@id/registerText2"
-         />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-
-        app:layout_constraintStart_toEndOf="@id/registerText2"
-        app:layout_constraintStart_toStartOf="@id/registerImage"
-        app:layout_constraintTop_toBottomOf="@id/registerText3"
-        tools:ignore="MissingConstraints"
-        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
