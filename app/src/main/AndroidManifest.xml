@@ -10,6 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OwnIt">
         <activity
+            android:name=".dashboard"
+            android:exported="true" />
+        <activity
+            android:name=".login"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

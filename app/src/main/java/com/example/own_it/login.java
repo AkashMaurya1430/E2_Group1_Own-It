@@ -9,36 +9,22 @@ import android.widget.TextView;
 
 import com.google.android.material.textfield.TextInputLayout;
 
-public class MainActivity extends AppCompatActivity {
+public class login extends AppCompatActivity {
     public TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
 
-        textView = (TextView) findViewById(R.id.registerText2);
+        textView = (TextView) findViewById(R.id.loginText2);
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,login.class);
+                Intent intent = new Intent(login.this,MainActivity.class);
                 startActivity(intent);
             }
         });
-    }
-
-    private Boolean validateName(){
-        TextInputLayout name = (TextInputLayout)findViewById(R.id.name);
-
-        String val = name.getEditText().getText().toString();
-
-        if (val.isEmpty()){
-            name.setError("Field cannot be empty");
-            return false;
-        }else{
-            name.setError(null);
-            return true;
-        }
     }
 
     private Boolean validateMobileNo(){
@@ -72,9 +58,12 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void register(View view){
-        if(!validateName() | !validateMobileNo()){
+    public void login(View view){
+        if(!validateMobileNo() | !validatePassword()){
             return;
         }
+
+        Intent intent = new Intent(login.this,dashboard.class);
+        startActivity(intent);
     }
 }
