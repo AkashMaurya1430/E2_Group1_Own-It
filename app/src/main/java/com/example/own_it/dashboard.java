@@ -16,6 +16,5 @@ public class dashboard extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
 
 
-
     }
 }
