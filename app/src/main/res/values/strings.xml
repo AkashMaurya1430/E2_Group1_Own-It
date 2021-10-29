@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Own-It</string>
+    <string name="page_title">Own-It</string>
+    <string name="favorite" />
+    <string name="content_description_favorite" />
+    <string name="search" />
+    <string name="content_description_search" />
+    <string name="more" />
+    <string name="content_description_more" />
 </resources>

@@ -7,7 +7,7 @@
     android:layout_gravity="center_horizontal"
     android:background="#D8CB4E"
     android:gravity="center"
-    tools:context=".MainActivity"
+    tools:context=".login"
     android:paddingTop="30dp"
     android:paddingLeft="40dp"
     android:paddingRight="40dp"
@@ -85,11 +85,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:onClick="login"
-        tools:ignore="MissingConstraints"
         />
 
     <TextView
-        android:id="@+id/loginText2"
+        android:id="@+id/loginText3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
